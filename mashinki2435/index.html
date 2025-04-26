@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="lib/swiper-bundle.min.css">
+    <script src="lib/swiper-bundle.min.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="img-header">
+            <h1>БЫСТРЫЙ ПОДБОР НОВОГО АВТОМОБИЛЯ</h1>
+            <img src="img/car-image.svg" alt="машинка">
+            <form class="filter-form">
+                <div class="inner">
+                    <div class="form-group">
+                        <label for="brand">Марка</label>
+                        <select id="brand" name="brand">
+                            <option value="">Выбрать...</option>
+                            <option value="bmw">BMW</option>
+                            <option value="audi">Audi</option>
+                            <option value="mercedes">Mercedes-Benz</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="model">Модель</label>
+                        <select id="model" name="model">
+                            <option value="">Выбрать...</option>
+                            <option value="x5">X5</option>
+                            <option value="q7">Q7</option>
+                            <option value="glc">GLC</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="transmission">КПП</label>
+                        <div class="radio-buttons">
+                            <input type="radio" id="any-transmission" name="transmission" value="any" checked>
+                            <label for="any-transmission">Любая</label>
+                            <input type="radio" id="automatic" name="transmission" value="automatic">
+                            <label for="automatic">АКПП</label>
+                            <input type="radio" id="manual" name="transmission" value="manual">
+                            <label for="manual">МКПП</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="price-from">Цена от, руб.</label>
+                        <select id="price-from" name="price-from">
+                            <option value="">Не выбрана</option>
+                            <option value="1000000">1 000 000</option>
+                            <option value="1500000">1 500 000</option>
+                            <option value="2000000">2 000 000</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="price-to">Цена до, руб.</label>
+                        <select id="price-to" name="price-to">
+                            <option value="">Не выбрана</option>
+                            <option value="2000000">2 000 000</option>
+                            <option value="3000000">3 000 000</option>
+                            <option value="4000000">4 000 000</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="show-offers-btn">ПОКАЗАТЬ 320 ПРЕДЛОЖЕНИЙ</button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+    <div class="container">
+        <div class="request">
+            <div class="img-background">
+                <img src="img/blue-man.png" alt="" class="blue-man-img">
+                <div class="banners">
+                    <img src="img/52.png" alt="">
+                    <img src="img/20.png" alt="">
+                    <img src="img/2025.png" alt="">
+                </div>
+            </div>
+            <div class="filter-form">
+                <div class="inner inner-flex">
+                    <div class="form-group">
+                        <label>Ваше имя</label>
+                        <input type="text" name="name" placeholder="Василий">
+                    </div>
+                    <div class="form-group">
+                        <label>Телефон</label>
+                        <input type="tel" name="telephone" placeholder="+7">
+                    </div>
+                    <div class="form-group">
+                        <button class="send-request-btn">ОТПРАВИТЬ ЗАЯВКУ</button>
+                        <div class="checkbox-agreement">
+                            <div class="checkbox" id="checkbox" onclick="check()">
+                                <div class="checkbox-point" id="checkbox-point"></div>
+                            </div>
+                            <p>Даю согласие на обработку персональных данных</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="grid-container">
+            <div class="grid-item grid-item-gift">
+                <div class="content">
+                    <h2>Подарок</h2>
+                    <p>Доп. оборудование до 250 000 рублей в подарок</p>
+                    <button>Подробнее</button>
+                </div>
+                <img src="img/gift.png" alt="">
+            </div>
+            <div class="grid-item grid-item-government_support">
+                <div class="content-other">
+                    <h2>Господдержка</h2>
+                    <p>Автокредит с господдержкой</p>
+                    <button>Подробнее</button>
+                </div>
+                <img src="img/woman20.png" alt="">
+            </div>
+            <div class="grid-item grid-item-car_installments">
+                <div class="content">
+                    <h2>Авторассрочка</h2>
+                    <p>Авторассрочка 0% переплат</p>
+                    <button>Подробнее</button>
+                </div>
+                <img src="img/0%.png" alt="">
+            </div>
+            <div class="grid-item grid-item-taxi">
+                <div class="content">
+                    <h2>Такси</h2>
+                    <p>Автомобили для такси под ключ</p>
+                    <button>Подробнее</button>
+                </div>
+                <img src="img/taxi.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="container-reviews">
+            <h1>НАМ ДОВЕРЯЮТ</h1>
+            <div class="reviews">
+                <div class="reviews-img">
+                    <img src="img/review1.png" alt="">
+                </div>
+                <div class="reviews-img">
+                    <img src="img/review2.png" alt="">
+                </div>
+                <div class="reviews-img">
+                    <img src="img/review3.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="slider ">
+            <div class="arrow-left">
+                <img src="img/arrow-left.png" alt="">
+            </div>
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="slide">
+                            <div class="name-comment-reviewer">
+                                <div class="name-reviewer">
+                                    <p>Роман Валентинович</p>
+                                </div>
+                                <div class="comment-reviewer">
+                                    <p>Здравствуйте, я сегодня в автосалоне Аванта купил Киа К5.
+                                        Все было быстро, менеджер Виталий молодец, просто на пятерку,
+                                        все обяснил, все показал, быстро оформили.
+                                        Я доволен и менеджером Виталием и автосалоном!</p>
+                                </div>
+                                <div class="stars-date-reviewer">
+                                    <div class="stars-reviewer">
+                                        <img src="img/stars.png" alt="">
+                                    </div>
+                                    <div class="date-reviewer">
+                                        <p>07.01.2025</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="image-reviewer"></div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide">
+                            <div class="name-comment-reviewer">
+                                <div class="name-reviewer">
+                                    <p>Роман Валентинович</p>
+                                </div>
+                                <div class="comment-reviewer">
+                                    <p>Здравствуйте, я сегодня в автосалоне Аванта купил Киа К5.
+                                        Все было быстро, менеджер Виталий молодец, просто на пятерку,
+                                        все обяснил, все показал, быстро оформили.
+                                        Я доволен и менеджером Виталием и автосалоном!</p>
+                                </div>
+                                <div class="stars-date-reviewer">
+                                    <div class="stars-reviewer">
+                                        <img src="img/stars.png" alt="">
+                                    </div>
+                                    <div class="date-reviewer">
+                                        <p>07.01.2025</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="image-reviewer"></div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide">
+                            <div class="name-comment-reviewer">
+                                <div class="name-reviewer">
+                                    <p>Роман Валентинович</p>
+                                </div>
+                                <div class="comment-reviewer">
+                                    <p>Здравствуйте, я сегодня в автосалоне Аванта купил Киа К5.
+                                        Все было быстро, менеджер Виталий молодец, просто на пятерку,
+                                        все обяснил, все показал, быстро оформили.
+                                        Я доволен и менеджером Виталием и автосалоном!</p>
+                                </div>
+                                <div class="stars-date-reviewer">
+                                    <div class="stars-reviewer">
+                                        <img src="img/stars.png" alt="">
+                                    </div>
+                                    <div class="date-reviewer">
+                                        <p>07.01.2025</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="image-reviewer"></div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide">
+                            <div class="name-comment-reviewer">
+                                <div class="name-reviewer">
+                                    <p>Роман Валентинович</p>
+                                </div>
+                                <div class="comment-reviewer">
+                                    <p>Здравствуйте, я сегодня в автосалоне Аванта купил Киа К5.
+                                        Все было быстро, менеджер Виталий молодец, просто на пятерку,
+                                        все обяснил, все показал, быстро оформили.
+                                        Я доволен и менеджером Виталием и автосалоном!</p>
+                                </div>
+                                <div class="stars-date-reviewer">
+                                    <div class="stars-reviewer">
+                                        <img src="img/stars.png" alt="">
+                                    </div>
+                                    <div class="date-reviewer">
+                                        <p>07.01.2025</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="image-reviewer"></div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide">
+                            <div class="name-comment-reviewer">
+                                <div class="name-reviewer">
+                                    <p>Роман Валентинович</p>
+                                </div>
+                                <div class="comment-reviewer">
+                                    <p>Здравствуйте, я сегодня в автосалоне Аванта купил Киа К5.
+                                        Все было быстро, менеджер Виталий молодец, просто на пятерку,
+                                        все обяснил, все показал, быстро оформили.
+                                        Я доволен и менеджером Виталием и автосалоном!</p>
+                                </div>
+                                <div class="stars-date-reviewer">
+                                    <div class="stars-reviewer">
+                                        <img src="img/stars.png" alt="">
+                                    </div>
+                                    <div class="date-reviewer">
+                                        <p>07.01.2025</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="image-reviewer"></div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide">
+                            <div class="name-comment-reviewer">
+                                <div class="name-reviewer">
+                                    <p>Роман Валентинович</p>
+                                </div>
+                                <div class="comment-reviewer">
+                                    <p>Здравствуйте, я сегодня в автосалоне Аванта купил Киа К5.
+                                        Все было быстро, менеджер Виталий молодец, просто на пятерку,
+                                        все обяснил, все показал, быстро оформили.
+                                        Я доволен и менеджером Виталием и автосалоном!</p>
+                                </div>
+                                <div class="stars-date-reviewer">
+                                    <div class="stars-reviewer">
+                                        <img src="img/stars.png" alt="">
+                                    </div>
+                                    <div class="date-reviewer">
+                                        <p>07.01.2025</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="image-reviewer"></div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide">
+                            <div class="name-comment-reviewer">
+                                <div class="name-reviewer">
+                                    <p>Роман Валентинович</p>
+                                </div>
+                                <div class="comment-reviewer">
+                                    <p>Здравствуйте, я сегодня в автосалоне Аванта купил Киа К5.
+                                        Все было быстро, менеджер Виталий молодец, просто на пятерку,
+                                        все обяснил, все показал, быстро оформили.
+                                        Я доволен и менеджером Виталием и автосалоном!</p>
+                                </div>
+                                <div class="stars-date-reviewer">
+                                    <div class="stars-reviewer">
+                                        <img src="img/stars.png" alt="">
+                                    </div>
+                                    <div class="date-reviewer">
+                                        <p>07.01.2025</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="image-reviewer"></div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide">
+                            <div class="name-comment-reviewer">
+                                <div class="name-reviewer">
+                                    <p>Роман Валентинович</p>
+                                </div>
+                                <div class="comment-reviewer">
+                                    <p>Здравствуйте, я сегодня в автосалоне Аванта купил Киа К5.
+                                        Все было быстро, менеджер Виталий молодец, просто на пятерку,
+                                        все обяснил, все показал, быстро оформили.
+                                        Я доволен и менеджером Виталием и автосалоном!</p>
+                                </div>
+                                <div class="stars-date-reviewer">
+                                    <div class="stars-reviewer">
+                                        <img src="img/stars.png" alt="">
+                                    </div>
+                                    <div class="date-reviewer">
+                                        <p>07.01.2025</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="image-reviewer"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="arrow-right">
+                <img src="img/arrow-right.png" alt="">
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="trade-in">
+            <h1>ОБМЕН АВТОМОБИЛЕЙ (TRADE-IN) В МОСКВЕ</h1>
+            <img src="img/vesta.png" alt="">
+            <div class="filter-form">
+                <div class="inner inner-flex">
+                    <div class="form-group">
+                        <label>Ваше имя</label>
+                        <input type="text" placeholder="Владимир Сергеевич">
+                    </div>
+                    <div class="form-group">
+                        <label>Марка</label>
+                        <select id="brand" name="brand">
+                            <option value="">Выбрать...</option>
+                            <option value="bmw">BMW</option>
+                            <option value="audi">Audi</option>
+                            <option value="mercedes">Mercedes-Benz</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="model">Модель</label>
+                        <select id="model" name="model">
+                            <option value="">Выбрать...</option>
+                            <option value="x5">X5</option>
+                            <option value="q7">Q7</option>
+                            <option value="glc">GLC</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Ваш телефон</label>
+                        <input type="text" placeholder="+7">
+                    </div>
+                    <div class="form-group">
+                        <label for="model">Год выпуска</label>
+                        <select id="model" name="model">
+                            <option value="">Укажите год выпуска</option>
+                            <option value="x5">1999</option>
+                            <option value="q7">2000</option>
+                            <option value="glc">2006</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="model">Пробег</label>
+                        <select id="model" name="model">
+                            <option value="">Примерный пробег</option>
+                            <option value="x5">1999</option>
+                            <option value="q7">2000</option>
+                            <option value="glc">2006</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="inner-btn">
+                    <div class="form-group">
+                        
+                    </div>
+                    <div class="form-group">
+                        <button>ЖДУ ЗВОНКА</button>
+                    </div>
+                    <div class="form-group">
+                        <div class="checkbox-agreement">
+                            <div class="checkbox" id="checkbox1" onclick="check1()">
+                                <div class="checkbox-point" id="checkbox-point1"></div>
+                            </div>
+                            <p>Даю согласие на обработку персональных данных</p>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>
